@@ -1,59 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📢 LAPOR! (Layanan Aspirasi dan Pengaduan Online Rakyat)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+LAPOR! adalah platform aplikasi berbasis web modern yang dirancang untuk memfasilitasi masyarakat dalam menyampaikan keluhan, aspirasi, dan permintaan informasi kepada instansi pemerintah. Aplikasi ini dikembangkan menggunakan tumpukan teknologi modern **Laravel 12**, **React.js**, dan **Inertia.js**, menyajikan antarmuka pengguna bergaya SPA (*Single Page Application*) yang sangat responsif, dinamis, dan estetik.
 
-## About Laravel
+## ✨ Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 🧑‍💻 Fitur Publik (Masyarakat Umum)
+- **Pelaporan Tanpa Login (Guest Reporting):** Masyarakat bisa mengirimkan pengaduan secara cepat, efisien, dan opsional bersifat anonim.
+- **Pelacakan Tiket (Track Status):** Setelah melapor, pelapor mendapatkan **Nomor Tiket** unik untuk melacak proses penyelesaian laporannya secara *real-time*.
+- **Halaman Statistik Terbuka:** Transparansi kinerja instansi dapat dilihat publik yang meliputi grafik jumlah laporan masuk, distribusi status, dan rata-rata durasi penyelesaian laporan.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🛡️ Fitur Operator (Petugas Penanganan)
+- **Dasbor Produktivitas:** Menampilkan metrik dan laporan-laporan yang ditugaskan secara spesifik kepada *operator* tersebut.
+- **Manajemen Status Laporan:** Pengubahan status laporan secara terstruktur, mulai dari *Diterima*, *Diverifikasi*, *Diproses*, *Selesai*, hingga *Ditolak*.
+- **Fitur Eskalasi / Diteruskan:** Kemampuan meneruskan laporan ke **Unit Lain** beserta lampiran pesannya jika laporan salah alamat atau membutuhkan tindak lanjut ekstra di lapangan.
+- **Notifikasi *Real-Time*:** Pemberitahuan otomatis (dalam-aplikasi) apabila mendapatkan penugasan laporan baru.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 👑 Fitur Administrator
+- **Dasbor Utama (Command Center):** Memantau semua aktivitas pelaporan lintas-unit secara *helicopter view*.
+- **Manajemen Pengguna (User Management):** Antarmuka CRUD khusus untuk mendaftarkan, mengedit, melakukan *reset password*, dan mengaktifkan/menonaktifkan seluruh akun.
+- **Manajemen Kategori:** Pengaturan bebas untuk kategori-kategori laporan publik (Infrastruktur, Pelayanan, Korupsi, dll).
+- **Manajemen Unit Organisasi:** Penambahan divisi/unit kerja untuk mengatur wewenang dan menampung operator-operator penanganan.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 💻 Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Backend:** Laravel 12 (PHP 8.2+)
+- **Frontend:** React 18
+- **Routing & State:** Inertia.js v2
+- **Desain & Styling:** Vanilla CSS (Sistem Desain Kustom Ekstra Premium) + Utilitas Tailwind
+- **Database:** SQLite (Bawaan) / Mendukung MySQL & PostgreSQL
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Panduan Instalasi (Local Development)
 
-### Premium Partners
+Ikuti langkah-langkah di bawah ini untuk mengunduh dan menjalankan aplikasi LAPOR! di mesin lokal Anda.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 1. Kloning Repositori
+```bash
+git clone https://github.com/kodokzzzz/laporapp.git
+cd laporapp
+```
 
-## Contributing
+### 2. Install Dependensi Backend (PHP)
+```bash
+composer install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Install Dependensi Frontend (Node.js)
+```bash
+npm install
+```
 
-## Code of Conduct
+### 4. Konfigurasi Environment
+Buat salinan file konfigurasi bawaan agar Laravel dapat membaca setelan Anda.
+```bash
+cp .env.example .env
+```
+Setelah disalin, buat (generate) kunci enkripsi aplikasi:
+```bash
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 5. Setup Database
+Pastikan *file database default* SQLite kosong sudah siap (otomatis tersedia di `database/database.sqlite`).
+Kemudian, jalankan perintah migrasi beserta eksekusi data *seeder* untuk membuat kerangka tabel dan menginisialisasi akun-akun administrator, operator, maupun contoh laporan *dummy*:
+```bash
+php artisan migrate:fresh --seed
+```
 
-## Security Vulnerabilities
+### 6. Build Aset Frontend & Jalankan Server Lokal
+Untuk menyalakan server lokal sekaligus memproses *build hot-reload* menggunakan Vite, Anda butuh membuka **dua jendela terminal** secara bersamaan:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Jendela Terminal 1 (Jalankan Vite):**
+```bash
+npm run dev
+```
 
-## License
+**Jendela Terminal 2 (Jalankan Backend Laravel):**
+```bash
+php artisan serve
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Selesai! Aplikasi sudah menyala dan bisa langsung diakses melalui peramban pada tautan:
+👉 **http://localhost:8000**
+
+---
+
+## 🔑 Akun Default (Bawaan Seeder)
+
+Untuk mempermudah proses masuk (*login*) perdana saat melakukan uji coba, *database seeder* telah menyediakan beberapa akun *default*.
+
+**Password Global (Berlaku Untuk Semua Akun di Bawah Ini):** `password`
+
+| Akses/Role | Alamat Email | Hak Spesifik |
+| :--- | :--- | :--- |
+| **Admin** | `admin@lapor.go.id` | Kontrol penuh, ubah *password*, tambah unit & kategori |
+| **Operator 1** | `operator1@lapor.go.id` | Menangani tiket untuk Unit Pelayanan |
+| **Operator 2** | `operator2@lapor.go.id` | Menangani tiket untuk Unit Infrastruktur |
+| **Pelapor Umum** | `pelapor1@lapor.go.id` | Dashboard pelapor (masyarakat yang memiliki akun) |
+
+*(Silakan periksa file `/database/seeders/UserSeeder.php` jika Anda ingin menginspeksi lebih banyak contoh alamat email)*
+
+---
+
+## 📜 Lisensi
+
+Aplikasi *open-source* yang dikembangkan secara eksperimental menggunakan sistem Agen-AI Cerdas tingkat lanjut (Gemini).
+Dapat digunakan untuk edukasi, portofolio, dan dimodifikasi secara bebas.
