@@ -14,7 +14,7 @@ export default function GuestLayout({ children }) {
                 <div className="guest-header-inner">
                     <Link href="/" className="guest-logo">
                         <span className="guest-logo-icon">📢</span>
-                        <span className="guest-logo-text">LAPOR!</span>
+                        <span className="guest-logo-text">LAPOR! STKIP Andi Matappa</span>
                     </Link>
 
                     {/* Desktop nav */}
@@ -109,10 +109,10 @@ export default function GuestLayout({ children }) {
                         <div className="guest-footer-brand">
                             <div className="guest-footer-logo">
                                 <span className="guest-logo-icon">📢</span>
-                                <span className="guest-logo-text">LAPOR!</span>
+                                <span className="guest-logo-text">LAPOR! STKIP AM</span>
                             </div>
                             <p className="guest-footer-desc">
-                                Layanan Aspirasi dan Pengaduan Online Rakyat. Platform resmi untuk menyampaikan aspirasi dan keluhan kepada instansi pemerintah.
+                                Layanan Aspirasi dan Pengaduan Online Civitas Akademika STKIP Andi Matappa. Platform resmi untuk menyampaikan aspirasi dan keluhan.
                             </p>
                         </div>
                         <div className="guest-footer-links">
@@ -131,7 +131,7 @@ export default function GuestLayout({ children }) {
                         </div>
                     </div>
                     <div className="guest-footer-bottom">
-                        <p>&copy; {new Date().getFullYear()} LAPOR! — Layanan Aspirasi dan Pengaduan Online Rakyat. Seluruh hak cipta dilindungi.</p>
+                        <p>&copy; {new Date().getFullYear()} LAPOR! STKIP Andi Matappa. Seluruh hak cipta dilindungi.</p>
                     </div>
                 </div>
             </footer>

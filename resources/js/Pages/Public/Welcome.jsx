@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 const FAQ_ITEMS = [
     {
-        q: 'Apa itu LAPOR!?',
-        a: 'LAPOR! (Layanan Aspirasi dan Pengaduan Online Rakyat) adalah platform resmi untuk menyampaikan aspirasi dan pengaduan kepada instansi pemerintah secara mudah, cepat, dan transparan.',
+        q: 'Apa itu LAPOR! STKIP Andi Matappa?',
+        a: 'LAPOR! adalah platform resmi untuk menyampaikan aspirasi dan pengaduan bagi civitas akademika STKIP Andi Matappa secara mudah, cepat, dan transparan.',
     },
     {
         q: 'Bagaimana cara membuat laporan?',
@@ -49,7 +49,7 @@ export default function Welcome({ stats = {} }) {
                         <span className="hero-title-highlight"> Pengaduan Online</span>
                     </h1>
                     <p className="hero-subtitle">
-                        Sampaikan aspirasi dan pengaduan Anda kepada instansi pemerintah secara mudah, cepat, transparan, dan dapat dipantau perkembangannya.
+                        Sampaikan aspirasi dan pengaduan Anda di lingkungan kampus STKIP Andi Matappa secara mudah, cepat, transparan, dan dapat dipantau perkembangannya.
                     </p>
                     <div className="hero-actions">
                         {isLoggedIn ? (
@@ -130,7 +130,7 @@ export default function Welcome({ stats = {} }) {
             {/* FAQ Section */}
             <section className="faq-section">
                 <h2 className="section-title">Pertanyaan yang Sering Diajukan</h2>
-                <p className="section-subtitle">Temukan jawaban untuk pertanyaan umum seputar LAPOR!</p>
+                <p className="section-subtitle">Temukan jawaban untuk pertanyaan umum seputar LAPOR! STKIP Andi Matappa</p>
                 <div className="faq-list">
                     {FAQ_ITEMS.map((item, idx) => (
                         <div key={idx} className={`faq-item ${openFaq === idx ? 'faq-item-open' : ''}`}>
@@ -144,8 +144,11 @@ export default function Welcome({ stats = {} }) {
                                 </svg>
                             </button>
                             {openFaq === idx && (
-                                <div className="faq-answer">
-                                    <p>{item.a}</p>
+                                <div className="faq-answer !max-h-none">
+                                    <div className="p-4 mb-2 rounded-xl bg-gradient-to-r from-blue-50/80 to-indigo-50/80 border border-blue-100 shadow-sm relative overflow-hidden">
+                                        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-blue-500 to-emerald-400"></div>
+                                        <p className="pl-2 text-gray-700 leading-relaxed font-medium m-0">{item.a}</p>
+                                    </div>
                                 </div>
                             )}
                         </div>

@@ -22,7 +22,7 @@ class PublicController extends Controller
 
         // Average resolution time in days (from created_at to resolved_at)
         $avgResolutionDays = Report::whereNotNull('resolved_at')
-            ->selectRaw('AVG(JULIANDAY(resolved_at) - JULIANDAY(created_at)) as avg_days')
+            ->selectRaw('AVG(DATEDIFF(resolved_at, created_at)) as avg_days')
             ->value('avg_days');
 
         $categoriesCount = Category::where('is_active', true)->count();
@@ -189,7 +189,7 @@ class PublicController extends Controller
             
         // Average resolution time in days (from created_at to resolved_at)
         $avgResolutionDays = Report::whereNotNull('resolved_at')
-            ->selectRaw('AVG(JULIANDAY(resolved_at) - JULIANDAY(created_at)) as avg_days')
+            ->selectRaw('AVG(DATEDIFF(resolved_at, created_at)) as avg_days')
             ->value('avg_days');
 
         return Inertia::render('Public/Statistics', [

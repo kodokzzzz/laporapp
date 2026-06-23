@@ -31,7 +31,7 @@ export default function Login({ status, canResetPassword }) {
                             Selamat Datang Kembali
                         </h1>
                         <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
-                            Silakan masuk ke akun LAPOR! Anda.
+                            Silakan masuk ke akun LAPOR! STKIP Andi Matappa Anda.
                         </p>
                     </div>
 

@@ -90,7 +90,7 @@ export default function AuthenticatedLayout({ header, children }) {
                 <div className="sidebar-header">
                     <Link href="/" className="sidebar-logo">
                         <span className="sidebar-logo-icon">📢</span>
-                        <span className="sidebar-logo-text">LAPOR!</span>
+                        <span className="sidebar-logo-text text-sm">LAPOR! STKIP AM</span>
                     </Link>
                     <button
                         className="sidebar-close-btn"
